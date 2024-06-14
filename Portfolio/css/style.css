@@ -85,10 +85,10 @@ section {
   align-items: center;
   padding: 0 9%;
 
-  /*! this is for image */
+  /* ! this is for image
   background: url("/Portfolio/images/home.jpg") no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
 }
 
 .home-content {
