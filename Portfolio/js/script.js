@@ -56,3 +56,32 @@ submit.addEventListener("click", () => {
     alert("Please ensure the Mobile number contains exactly 10 digits.");
   }
 });
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+    const form = event.target;
+    const formData = new FormData(form);
+
+    // Send form data using fetch
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          form.reset(); // Clear the form fields
+          window.location.href = "https://konprtk.me/thankyou.html"; // Redirect to thank-you page
+        } else {
+          alert("There was a problem with the submission.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("There was a problem with the submission.");
+      });
+  });
