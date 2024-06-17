@@ -35,6 +35,7 @@ window.onscroll = () => {
       sec.classList.remove("show-animate");
     }
   });
+
   // sticky header
   let header = document.querySelector("header");
 
@@ -45,3 +46,13 @@ window.onscroll = () => {
   menuIcon.classList.remove("bx-x");
   navbar.classList.remove("active");
 };
+
+const mobileNumber = document.getElementById("mobileNumber");
+const submit = document.getElementById("submit");
+
+submit.addEventListener("click", () => {
+  let count = mobileNumber.value;
+  if (count.length < 10 || count.length > 10) {
+    alert("Please ensure the Mobile number contains exactly 10 digits.");
+  }
+});
