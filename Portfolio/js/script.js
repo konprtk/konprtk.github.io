@@ -60,7 +60,7 @@ submit.addEventListener("click", () => {
 document
   .getElementById("contactForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); // this prevent default form submission
     const form = event.target;
     const formData = new FormData(form);
 
