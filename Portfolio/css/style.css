@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -918,6 +916,7 @@ section:nth-child(odd) .animate.scroll {
 
 .projects-row {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   padding-top: 80px;
   
@@ -949,6 +948,7 @@ section:nth-child(odd) .animate.scroll {
   width: 30rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transition: 0.5s;
+  
 }
 
 /* .project-card:hover {
@@ -956,16 +956,16 @@ section:nth-child(odd) .animate.scroll {
   border-color: var(--bg-color);
 } */
 
-.project-img {
+/* .project-img {
   width: 100%;
   height: 20rem;
   object-fit: cover;
   transition: 0.5s;
-}
+} */
 
-.project-card:hover .project-img {
+/* .project-card:hover .project-img {
   opacity: 0.8;
-}
+} */
 
 .project-info {
   padding: 1.5rem;
@@ -1035,6 +1035,7 @@ section:nth-child(odd) .animate.scroll {
   .projects .heading {
     font-size: 3.5rem;
   }
+  
 
   .project-card {
     width: 22rem;
@@ -1049,13 +1050,30 @@ section:nth-child(odd) .animate.scroll {
   .project-info {
     padding: 1rem;
   }
+
+  .projects-row {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    
+  }
 }
+
 
 @media (max-width: 520px) {
   .projects .heading {
     font-size: 3rem;
   }
 
+  .projects-row {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    
+  }
+.project-card {
+    margin-top: 1rem;
+  }
   .project-title {
     font-size: 1.8rem;
   }
